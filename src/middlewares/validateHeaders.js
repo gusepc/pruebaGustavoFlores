@@ -20,7 +20,6 @@ function validateHeaders(req, res, next) {
   if (authentication !== apiKey) {
     return res.status(400).json({ error: "Invalid API key" });
   }
-  req.logger.info("Headers validated", { date, signature, authentication });
 
   next();
 }

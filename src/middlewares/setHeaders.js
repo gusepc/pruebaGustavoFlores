@@ -11,8 +11,6 @@ function setHeaders(req, res, next) {
   req.headers["x-signature"] = signature;
   req.headers["x-authentication"] = apiKey;
 
-  req.logger.info(`Headers set - Date: ${date}, Signature: ${signature}, authentication: ${apiKey}`);
-
   next();
 }
 
